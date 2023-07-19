@@ -29,8 +29,9 @@ while (runProgram)
 {
     int first = RandomRoll(r);
     int second = RandomRoll(r);
-
-    Console.WriteLine(String.Format("{0,20}", "Roll 1"));
+    int i = 0;
+    i++;
+    Console.WriteLine(String.Format("{0,20}", $"Roll {i}"));
     Console.WriteLine($"You rolled a {first} and a {second} your total is {first + second}!");
 
     if (r == 6)
@@ -90,14 +91,9 @@ Console.WriteLine("Thank you for playing, come back anytime ;)");
 static int RandomRoll(int sides)
 {
     Random dice = new Random();
-    int x = 0;
-    if (x == 0)
-    {
+    
     int roll = dice.Next(1, sides + 1);
     return roll;
-    }
-    else
-    {
-    return 0;
-    }
+    
+    
 }
